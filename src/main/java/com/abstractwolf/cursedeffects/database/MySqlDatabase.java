@@ -46,7 +46,8 @@ public class MySqlDatabase {
             connectionPool.addDataSourceProperty("password", pass);
             connectionPool.setConnectionTimeout(3000);
             connectionPool.setValidationTimeout(1000);
-//            connectionPool.setMaximumPoolSize(20);
+            connectionPool.setLeakDetectionThreshold(60 * 1000);
+            connectionPool.setMaximumPoolSize(20);
 
             System.out.println("Waiting for confirmation of connection.");
         } catch (Exception e) {
@@ -63,18 +64,14 @@ public class MySqlDatabase {
      */
     public void sendPreparedStatement(String query, boolean update, boolean async, Callback<PreparedStatement> callback) {
 
-        if (connectionPool == null || connectionPool.isClosed()) {
-            openConnection();
-        }
-
         if (async) {
 
             new Thread(() -> {
-                Connection connection;
+
                 PreparedStatement statement;
 
-                try {
-                    connection = connectionPool.getConnection();
+                try (Connection connection = connectionPool.getConnection()) {
+
                     statement = connection.prepareStatement(query);
 
                     if (update) {
@@ -91,11 +88,10 @@ public class MySqlDatabase {
             }).start();
         } else {
 
-            Connection connection;
             PreparedStatement statement;
 
-            try {
-                connection = connectionPool.getConnection();
+            try (Connection connection = connectionPool.getConnection()) {
+
                 statement = connection.prepareStatement(query);
 
                 if (update) {

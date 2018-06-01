@@ -91,5 +91,7 @@ public class UserData {
             plugin.getDatabase().sendPreparedStatement("INSERT INTO cursedeffects (uuid, particle, sound) VALUES('" + uuid.toString() + "', '" + (particle == null ? "NONE" :  particle.name()) + "', '" + (sound == null ? "NONE" : sound.name()) + "');"
                     , false, !shutdown, (statement) -> {});
         }
+
+        System.out.println("Data saved for (" + uuid.toString() + ").");
     }
 }

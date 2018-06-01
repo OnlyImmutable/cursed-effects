@@ -41,7 +41,7 @@ public class DataListener implements Listener {
             new BukkitRunnable() {
                 @Override
                 public void run() {
-                    ParticleUtil.sendParticle(player, data.getParticle(), amount, speed);
+                    ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
                 }
             }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10);
         }
@@ -65,7 +65,7 @@ public class DataListener implements Listener {
             int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
             float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
 
-            ParticleUtil.sendParticle(player, data.getParticle(), amount, speed);
+            ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
         }
 
         if (data.getSound() != null) {

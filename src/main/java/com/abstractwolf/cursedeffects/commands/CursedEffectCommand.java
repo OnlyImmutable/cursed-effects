@@ -42,7 +42,7 @@ public class CursedEffectCommand extends AbstractCommand {
                     new BukkitRunnable() {
                         @Override
                         public void run() {
-                            ParticleUtil.sendParticle(player, data.getParticle(), amount, speed);
+                            ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
                         }
                     }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10);
                 }

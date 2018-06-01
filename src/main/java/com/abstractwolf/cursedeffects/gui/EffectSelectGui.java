@@ -5,9 +5,11 @@ import com.abstractwolf.cursedeffects.manager.data.UserData;
 import com.abstractwolf.cursedeffects.utils.Message;
 import com.abstractwolf.cursedeffects.utils.StringUtil;
 import com.abstractwolf.cursedeffects.utils.itemstack.ItemFactory;
+import com.abstractwolf.cursedeffects.utils.itemstack.PotionFactory;
 import com.abstractwolf.cursedeffects.utils.menu.MenuFactory;
 import com.abstractwolf.cursedeffects.utils.menu.MenuItem;
 import com.abstractwolf.cursedeffects.utils.placeholder.Placeholder;
+import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -47,25 +49,54 @@ public class EffectSelectGui extends MenuFactory {
                 Material material = Material.valueOf(CursedEffectsPlugin.getPlugin().getConfig().getString("particles." + particle.name() + ".icon.material"));
                 byte materialData = (byte) (CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + particle.name() + ".icon.data"));
 
-                boolean hasPermission = player.hasPermission("cursedeffects.particle." + particle.name()) || player.hasPermission("cursedeffects.particles.*");
+                String permission = CursedEffectsPlugin.getPlugin().getConfig().getString("particles." + particle.name() + ".permission");
+
+                boolean hasPermission = player.hasPermission(permission) || player.hasPermission("cursedeffects.particles.*");
                 boolean isEnabled = data.getParticle() == particle;
 
                 if (hasPermission) {
-                    ItemFactory item = new ItemFactory(material, 1, materialData)
-                            .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(particle.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
-                            .setLore(
-                                    "",
-                                    "&7This particle effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
-                                    "",
-                                    "&7Click to enable this particle effect."
-                            );
+                    ItemFactory itemFactory = null;
+                    PotionFactory potionFactory = null;
 
-                    if (isEnabled) {
-                        item.enchant(Enchantment.DURABILITY);
-                        item.addItemFlag(ItemFlag.HIDE_ENCHANTS);
+                    if (material == Material.POTION || material == Material.SPLASH_POTION) {
+
+                        potionFactory =  new PotionFactory((material == Material.SPLASH_POTION))
+                                .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(particle.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
+                                .setLore(
+                                        "",
+                                        "&7This particle effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
+                                        "",
+                                        "&7Click to enable this particle effect."
+                                );
+
+                        try {
+                            String[] rgb = CursedEffectsPlugin.getPlugin().getConfig().getString("particles." + particle.name() + ".icon.color").split(",");
+                            potionFactory.setColour(Color.fromRGB(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2])));
+                        } catch (Exception e) {}
+
+                        if (isEnabled) {
+                            potionFactory.enchant(Enchantment.DURABILITY);
+                        }
+
+                        potionFactory.addItemFlag(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_ATTRIBUTES);
+                    } else {
+                        itemFactory = new ItemFactory(material, 1, materialData)
+                                .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(particle.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
+                                .setLore(
+                                        "",
+                                        "&7This particle effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
+                                        "",
+                                        "&7Click to enable this particle effect."
+                                );
+                        if (isEnabled) {
+                            itemFactory.enchant(Enchantment.DURABILITY);
+                        }
+
+                        itemFactory.addItemFlag(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_ATTRIBUTES);
                     }
 
-                    addItem(new MenuItem(position, item.build()) {
+
+                    addItem(new MenuItem(position, ((material == Material.POTION  || material == Material.SPLASH_POTION) ? potionFactory.build() : itemFactory.build())) {
 
                         @Override
                         public void click(Player player, ClickType clickType) {
@@ -91,29 +122,59 @@ public class EffectSelectGui extends MenuFactory {
                 Material material = Material.valueOf(CursedEffectsPlugin.getPlugin().getConfig().getString("sounds." + sound.name() + ".icon.material"));
                 byte materialData = (byte) (CursedEffectsPlugin.getPlugin().getConfig().getInt("sounds." + sound.name() + ".icon.data"));
 
-                boolean hasPermission = player.hasPermission("cursedeffects.sound." + sound.name()) || player.hasPermission("cursedeffects.sounds.*");
+                String permission = CursedEffectsPlugin.getPlugin().getConfig().getString("sounds." + sound.name() + ".permission");
+
+                boolean hasPermission = player.hasPermission(permission) || player.hasPermission("cursedeffects.sounds.*");
                 boolean isEnabled = data.getSound() == sound;
 
                 if (hasPermission) {
-                    ItemFactory item = new ItemFactory(material, 1, materialData)
-                            .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(sound.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
-                            .setLore(
-                                    "",
-                                    "&7This sound effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
-                                    "",
-                                    "&7Click to enable this sound effect."
-                            );
 
-                    if (isEnabled) {
-                        item.enchant(Enchantment.DURABILITY);
-                        item.addItemFlag(ItemFlag.HIDE_ENCHANTS);
+                    ItemFactory itemFactory = null;
+                    PotionFactory potionFactory = null;
+
+                    if (material == Material.POTION || material == Material.SPLASH_POTION) {
+
+                        potionFactory =  new PotionFactory((material == Material.SPLASH_POTION))
+                                .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(sound.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
+                                .setLore(
+                                        "",
+                                        "&7This sound effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
+                                        "",
+                                        "&7Click to enable this sound effect."
+                                );
+
+                        try {
+                            String[] rgb = CursedEffectsPlugin.getPlugin().getConfig().getString("sounds." + sound.name() + ".icon.color").split(",");
+                            potionFactory.setColour(Color.fromRGB(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2])));
+                        } catch (Exception e) {}
+
+                        if (isEnabled) {
+                            potionFactory.enchant(Enchantment.DURABILITY);
+                        }
+
+                        potionFactory.addItemFlag(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_ATTRIBUTES);
+                    } else {
+                        itemFactory = new ItemFactory(material, 1, materialData)
+                                .setDisplayName("&7&l" + StringUtil.setUppercaseEachStart(sound.name().replace("_", " ")) + " &7(" + (hasPermission ? "&aUnlocked" : "&cLocked") + "&7)")
+                                .setLore(
+                                        "",
+                                        "&7This sound effect is currently " + (isEnabled ? "&aenabled" : "&cnot enabled") + "&7.",
+                                        "",
+                                        "&7Click to enable this sound effect."
+                                );
+                        if (isEnabled) {
+                            itemFactory.enchant(Enchantment.DURABILITY);
+                        }
+
+                        itemFactory.addItemFlag(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_POTION_EFFECTS, ItemFlag.HIDE_ATTRIBUTES);
                     }
 
-                    addItem(new MenuItem(position, item.build()) {
+
+
+                    addItem(new MenuItem(position, ((material == Material.POTION  || material == Material.SPLASH_POTION) ? potionFactory.build() : itemFactory.build())) {
 
                         @Override
                         public void click(Player player, ClickType clickType) {
-
                             data.setSound(sound);
                             Message.sendMessage(player, "setSound", Collections.singletonList(new Placeholder("%sound%", StringUtil.setUppercaseEachStart(sound.name().replace("_", " ")))));
                             player.closeInventory();
@@ -168,15 +229,13 @@ public class EffectSelectGui extends MenuFactory {
 
         if (isParticle) {
             totalItems = player.hasPermission("cursedeffects.particles.*") ? CursedEffectsPlugin.getPlugin().getEffectManager().getAvailableParticles().size() : 0;
-            System.out.println(totalItems);
         } else {
             totalItems = player.hasPermission("cursedeffects.sounds.*") ? CursedEffectsPlugin.getPlugin().getEffectManager().getAvailableSounds().size() : 0;
-            System.out.println(totalItems);
         }
 
         if (isParticle && !player.hasPermission("cursedeffects.particles.*")) {
             for (Particle particle : CursedEffectsPlugin.getPlugin().getEffectManager().getAvailableParticles()) {
-                if (player.hasPermission("cursedeffects.particle." + particle.name())) {
+                if (player.hasPermission(CursedEffectsPlugin.getPlugin().getConfig().getString("particles." + particle.name() + ".permission"))) {
                     totalItems += 1;
                 }
             }
@@ -184,13 +243,11 @@ public class EffectSelectGui extends MenuFactory {
 
         if (!isParticle && !player.hasPermission("cursedeffects.sounds.*")) {
             for (Sound sound : CursedEffectsPlugin.getPlugin().getEffectManager().getAvailableSounds()) {
-                if (player.hasPermission("cursedeffects.sound." + sound.name())) {
+                if (player.hasPermission(CursedEffectsPlugin.getPlugin().getConfig().getString("sounds." + sound.name() + ".permission"))) {
                     totalItems += 1;
                 }
             }
         }
-
-        System.out.println(totalItems + " - 1");
 
         int pages = (totalItems / perPage);
 

@@ -8,6 +8,7 @@ com\abstractwolf\cursedeffects\utils\itemstack\Factory.class
 com\abstractwolf\cursedeffects\utils\itemstack\ItemFactory.class
 com\abstractwolf\cursedeffects\utils\command\CommandManager.class
 com\abstractwolf\cursedeffects\utils\menu\MenuFactory$1.class
+com\abstractwolf\cursedeffects\utils\itemstack\PotionFactory.class
 com\abstractwolf\cursedeffects\database\MySqlDatabase.class
 com\abstractwolf\cursedeffects\utils\menu\MenuFactory.class
 com\abstractwolf\cursedeffects\listener\DataListener$1.class

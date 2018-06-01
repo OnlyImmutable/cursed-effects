@@ -58,6 +58,7 @@ public class CursedEffectsPlugin extends JavaPlugin {
             for (Particle particle : Particle.values()) {
                 config.set("particles." + particle.name() + ".amount", 5);
                 config.set("particles." + particle.name() + ".speed", 0.25);
+                config.set("particles." + particle.name() + ".permission", "cursedeffects.particle." + particle.name());
                 config.set("particles." + particle.name() + ".icon.material", Material.GLASS.name());
                 config.set("particles." + particle.name() + ".icon.data", (byte) 0);
                 saveConfig();
@@ -66,6 +67,7 @@ public class CursedEffectsPlugin extends JavaPlugin {
             for (Sound sound : Sound.values()) {
                 config.set("sounds." + sound.name() + ".volume", 1.25);
                 config.set("sounds." + sound.name() + ".pitch", 0.75);
+                config.set("sounds." + sound.name() + ".permission", "cursedeffects.sound." + sound.name());
                 config.set("sounds." + sound.name() + ".icon.material", Material.GLASS.name());
                 config.set("sounds." + sound.name() + ".icon.data", (byte) 0);
                 saveConfig();
