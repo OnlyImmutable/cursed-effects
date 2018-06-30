@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b22607fc-d1da-4733-8c08-a69b5dde8bd3" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="8dec394e-5eb5-415c-bb1c-3f80f869ba87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/EffectType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/LocalFileDatabase.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/CursedEffects-1.0.0.jar" afterPath="$PROJECT_DIR$/output/CursedEffects-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/CursedEffectsPlugin.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/CursedEffectsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/commands/CursedEffectCommand$1.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/commands/CursedEffectCommand$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$1.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$2.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$3.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$4.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/gui/EffectSelectGui.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/listener/DataListener$1.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/listener/DataListener$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/listener/DataListener.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/listener/DataListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/manager/EffectManager.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/manager/EffectManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/manager/data/UserData.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/manager/data/UserData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/utils/ParticleUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/abstractwolf/cursedeffects/utils/ParticleUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-CursedEffects-1.0.0.jar" afterPath="$PROJECT_DIR$/target/original-CursedEffects-1.0.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/EffectManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/EffectManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages.yml" afterPath="$PROJECT_DIR$/src/main/resources/messages.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.yml" afterPath="$PROJECT_DIR$/target/classes/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages.yml" afterPath="$PROJECT_DIR$/target/classes/messages.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,12 +49,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataListener.java" pinned="false" current-in-tab="true">
+    <leaf>
+      <file leaf-file-name="DataListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="338">
+              <caret line="186" column="130" lean-forward="false" selection-start-line="186" selection-start-column="117" selection-end-line="186" selection-end-column="130" />
+              <folding>
+                <element signature="e#6570#8317#0" expanded="true" />
+                <element signature="e#8316#8317#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticleUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -25,14 +85,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PacketPlayOutWorldParticles.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/net/minecraft/server/v1_12_R1/PacketPlayOutWorldParticles.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-559">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CursedEffectsPlugin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1605">
+              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CursedEffectCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="62" column="137" lean-forward="false" selection-start-line="62" selection-start-column="137" selection-end-line="62" selection-end-column="137" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EffectSelectGui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3077">
-              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,52 +131,32 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>maximum</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$/../../../../../Temporary Worldedit/WorldEdit" value="PREVIEW" />
-      </map>
+    <option name="externalProjectsViewState">
+      <projects_view />
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/Callback.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/StringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/data/UserData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/messages/MessageManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/placeholder/PlaceholderManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/SkullFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/ItemFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/UserData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/UserManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/command/CommandManager.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/command/AbstractCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/LocalFileDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/EffectType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/EffectManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/PotionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
       </list>
     </option>
   </component>
@@ -104,29 +172,42 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="CloudEscape-Nexus" />
+      </list>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="823" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,6 +248,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cursedeffects" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CursedEffects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CursedEffects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cursedeffects" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CursedEffects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CursedEffects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cursedeffects" type="462c0819:PsiDirectoryNode" />
               <item name="listener" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -181,30 +280,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Workspace/CrusadeHub" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.abstractwolf.cursedeffects.utils.itemstack" />
-      <recent name="com.abstractwolf.cursedeffects.utils" />
-      <recent name="com.abstractwolf.cursedeffects" />
-      <recent name="com.abstractwolf.cursedeffects.messages" />
-      <recent name="com.abstractwolf.cursedeffects.database" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils" />
-      <recent name="C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -219,10 +301,30 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -231,14 +333,31 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -249,107 +368,98 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b22607fc-d1da-4733-8c08-a69b5dde8bd3" name="Default" comment="" />
-      <created>1527771791991</created>
+      <changelist id="8dec394e-5eb5-415c-bb1c-3f80f869ba87" name="Default" comment="" />
+      <created>1530355963592</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1527771791991</updated>
-      <workItem from="1527771799263" duration="8837000" />
-      <workItem from="1527798466355" duration="2694000" />
-      <workItem from="1527846525870" duration="2835000" />
-      <workItem from="1527858345273" duration="4997000" />
-      <workItem from="1527967471938" duration="5246000" />
-      <workItem from="1527979449826" duration="1070000" />
-      <workItem from="1528065097382" duration="1938000" />
-      <workItem from="1528228900099" duration="677000" />
-      <workItem from="1528323013483" duration="1342000" />
-      <workItem from="1528481751171" duration="678000" />
-      <workItem from="1528482467582" duration="593000" />
+      <updated>1530355963592</updated>
+      <workItem from="1530355965059" duration="4370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30907000" />
+    <option name="totallyTimeSpent" value="4370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010661" side_tool="true" weight="0.32897604" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.17910448" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.32897604" />
-      <window_info anchor="bottom" id="Floobits" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21816881" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1795422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.32897604" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Floobits" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.17910448" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21816881" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1795422" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,367 +468,143 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="90" column="75" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+        <state relative-caret-position="-1114">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/LocalFileDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="82" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="114" column="80" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="79" selection-start-line="49" selection-start-column="79" selection-end-line="49" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.1.0/HikariCP-3.1.0-sources.jar!/com/zaxxer/hikari/HikariConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1556">
-          <caret line="238" column="24" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/messages/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/ItemFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/data/UserData.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/UserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/command/CommandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/command/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ReflectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-20180527.071454-147.jar!/org/bukkit/Sound.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-20180527.071454-147.jar!/org/bukkit/World.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/net/minecraft/server/v1_12_R1/EnumParticle.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/net/minecraft/server/v1_12_R1/PacketPlayOutWorldParticles.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="169" lean-forward="true" selection-start-line="25" selection-start-column="169" selection-end-line="25" selection-end-column="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/net/minecraft/server/v1_12_R1/EntityPlayer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/org/bukkit/craftbukkit/v1_12_R1/entity/CraftPlayer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="888" column="18" lean-forward="true" selection-start-line="888" selection-start-column="18" selection-end-line="888" selection-end-column="18" />
+        <state relative-caret-position="496">
+          <caret line="119" column="55" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/EffectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="495">
+          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/scene/paint/Color.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/EffectType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="662" column="24" selection-start-line="662" selection-start-column="24" selection-end-line="662" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/PotionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="82" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/CooldownManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="98" column="80" selection-start-line="98" selection-start-column="80" selection-end-line="98" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3077">
-          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libraries/craftbukkit-1.12.2.jar!/net/minecraft/server/v1_12_R1/PacketPlayOutWorldParticles.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-559">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="62" column="137" lean-forward="false" selection-start-line="62" selection-start-column="137" selection-end-line="62" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="338">
+          <caret line="186" column="130" lean-forward="false" selection-start-line="186" selection-start-column="117" selection-end-line="186" selection-end-column="130" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6570#8317#0" expanded="true" />
+            <element signature="e#8316#8317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />

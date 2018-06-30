@@ -1,6 +1,7 @@
 package com.abstractwolf.cursedeffects.commands;
 
 import com.abstractwolf.cursedeffects.CursedEffectsPlugin;
+import com.abstractwolf.cursedeffects.EffectType;
 import com.abstractwolf.cursedeffects.gui.EffectSelectGui;
 import com.abstractwolf.cursedeffects.manager.data.UserData;
 import com.abstractwolf.cursedeffects.utils.Message;
@@ -27,9 +28,11 @@ public class CursedEffectCommand extends AbstractCommand {
 
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("particles")) {
-                new EffectSelectGui(player, 1, true);
+                new EffectSelectGui(player, 1, EffectType.PARTICLE);
             } else if (args[0].equalsIgnoreCase("sounds")) {
-                new EffectSelectGui(player, 1, false);
+                new EffectSelectGui(player, 1, EffectType.SOUND);
+            } else if (args[0].equalsIgnoreCase("trails")) {
+                new EffectSelectGui(player, 1, EffectType.TRAIL);
             } else if (args[0].equalsIgnoreCase("test") && player.hasPermission("cursedeffects.test")) {
                 UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
@@ -54,14 +57,22 @@ public class CursedEffectCommand extends AbstractCommand {
                             player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
                         }
 
-                        Message.sendMessageToPlayer(player, "Ran test sound and particle..");
+                        if (data.getParticleTrail() != null) {
+
+                            int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".amount");
+                            float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("trails." + data.getParticleTrail().name() + ".speed");
+
+                            ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
+                        }
+
+                        Message.sendMessageToPlayer(player, "Ran test sound, trail and particle..");
                     }
                 }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10);
             } else {
-                Message.sendMessageToPlayer(player, "/cursedeffects [particles|sounds]");
+                Message.sendMessageToPlayer(player, "/cursedeffects [particles|trails|sounds]");
             }
         } else {
-            Message.sendMessageToPlayer(player, "/cursedeffects [particles|sounds]");
+            Message.sendMessageToPlayer(player, "/cursedeffects [particles|trails|sounds]");
         }
     }
 }

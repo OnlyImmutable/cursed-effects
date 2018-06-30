@@ -1,24 +1,26 @@
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\ReflectionUtil.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\commands\CursedEffectCommand.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\itemstack\ItemFactory.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\placeholder\Placeholder.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\StringUtil.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\database\MySqlDatabase.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\manager\data\UserData.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\command\CommandManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\gui\EffectSelectGui.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\menu\MenuItem.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\listener\DataListener.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\Callback.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\command\AbstractCommand.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\menu\MenuFactory.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\menu\MenuManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\messages\MessageManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\itemstack\Factory.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\ParticleUtil.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\Message.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\placeholder\PlaceholderManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\manager\EffectManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\utils\itemstack\PotionFactory.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\manager\UserManager.java
-C:\Users\jake2\Desktop\Files\Programming\Workspaces\Abstract Studios\CursedEffects\src\main\java\com\abstractwolf\cursedeffects\CursedEffectsPlugin.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/manager/UserManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/PotionFactory.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/listener/DataListener.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/command/AbstractCommand.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuFactory.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/Message.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/placeholder/PlaceholderManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/manager/data/UserData.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/commands/CursedEffectCommand.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/ParticleUtil.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/Callback.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/EffectType.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/placeholder/Placeholder.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/gui/EffectSelectGui.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/ReflectionUtil.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/database/LocalFileDatabase.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/CursedEffectsPlugin.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/database/MySqlDatabase.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/ItemFactory.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/manager/EffectManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/StringUtil.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/command/CommandManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/messages/MessageManager.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/menu/MenuItem.java
+/Users/thatabstractwolf/Desktop/CursedEffects/src/main/java/com/abstractwolf/cursedeffects/utils/itemstack/Factory.java

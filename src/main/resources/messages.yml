@@ -1,5 +1,6 @@
 messages:
   prefix: '&5&lCursed Effects &8| &7'
   setParticle: 'Your particle was set to %particle%!'
+  setTrail: 'Your trail was set to %trail%!'
   setSound: 'Your sound was set to %sound%!'
   noPermission: 'You do not have permission to use this.. You require %permission%.'

@@ -1,5 +1,6 @@
 package com.abstractwolf.cursedeffects;
 
+import com.abstractwolf.cursedeffects.database.LocalFileDatabase;
 import com.abstractwolf.cursedeffects.database.MySqlDatabase;
 import com.abstractwolf.cursedeffects.listener.DataListener;
 import com.abstractwolf.cursedeffects.manager.EffectManager;
@@ -24,6 +25,9 @@ public class CursedEffectsPlugin extends JavaPlugin {
     private CommandManager commandManager;
 
     private MySqlDatabase database;
+    private LocalFileDatabase flatfileDatabase;
+
+    private boolean useFlatfile;
 
     @Override
     public void onEnable() {
@@ -35,8 +39,14 @@ public class CursedEffectsPlugin extends JavaPlugin {
 
         FileConfiguration config = getConfig();
 
-        database = new MySqlDatabase(config.getString("database.host"), config.getInt("database.port"), config.getString("database.database"), config.getString("database.username"), config.getString("database.password"));
-        database.openConnection();
+        useFlatfile = config.getBoolean("settings.flatfile");
+
+        if (isUseFlatfile()) {
+            flatfileDatabase = new LocalFileDatabase();
+        } else {
+            database = new MySqlDatabase(config.getString("database.host"), config.getInt("database.port"), config.getString("database.database"), config.getString("database.username"), config.getString("database.password"));
+            database.openConnection();
+        }
 
         userManager = new UserManager();
         messageManager = new MessageManager();
@@ -53,24 +63,42 @@ public class CursedEffectsPlugin extends JavaPlugin {
             CursedEffectsPlugin.getPlugin().getUserManager().getUserData(user.getUniqueId()).load();
         });
 
-        if (config.getConfigurationSection("particles") == null && config.getConfigurationSection("sounds") == null) {
+        if (config.getConfigurationSection("particles") == null || config.getConfigurationSection("sounds") == null || config.getConfigurationSection("trails") == null) {
 
-            for (Particle particle : Particle.values()) {
-                config.set("particles." + particle.name() + ".amount", 5);
-                config.set("particles." + particle.name() + ".speed", 0.25);
-                config.set("particles." + particle.name() + ".permission", "cursedeffects.particle." + particle.name());
-                config.set("particles." + particle.name() + ".icon.material", Material.GLASS.name());
-                config.set("particles." + particle.name() + ".icon.data", (byte) 0);
-                saveConfig();
+            if (config.getConfigurationSection("particles") == null) {
+                for (Particle particle : Particle.values()) {
+                    config.set("particles." + particle.name() + ".amount", 5);
+                    config.set("particles." + particle.name() + ".speed", 0.25);
+                    config.set("particles." + particle.name() + ".permission", "cursedeffects.particle." + particle.name());
+                    config.set("particles." + particle.name() + ".icon.material", Material.GLASS.name());
+                    config.set("particles." + particle.name() + ".icon.data", (byte) 0);
+                    saveConfig();
+                }
             }
 
-            for (Sound sound : Sound.values()) {
-                config.set("sounds." + sound.name() + ".volume", 1.25);
-                config.set("sounds." + sound.name() + ".pitch", 0.75);
-                config.set("sounds." + sound.name() + ".permission", "cursedeffects.sound." + sound.name());
-                config.set("sounds." + sound.name() + ".icon.material", Material.GLASS.name());
-                config.set("sounds." + sound.name() + ".icon.data", (byte) 0);
-                saveConfig();
+            if (config.getConfigurationSection("sounds") == null) {
+                for (Sound sound : Sound.values()) {
+                    config.set("sounds." + sound.name() + ".volume", 1.25);
+                    config.set("sounds." + sound.name() + ".pitch", 0.75);
+                    config.set("sounds." + sound.name() + ".permission", "cursedeffects.sound." + sound.name());
+                    config.set("sounds." + sound.name() + ".icon.material", Material.GLASS.name());
+                    config.set("sounds." + sound.name() + ".icon.data", (byte) 0);
+                    saveConfig();
+                }
+            }
+
+            if (config.getConfigurationSection("trails") == null) {
+                for (Particle particle : Particle.values()) {
+                    config.set("trails." + particle.name() + ".amount", 5);
+                    config.set("trails." + particle.name() + ".speed", 0.25);
+                    config.set("trails." + particle.name() + ".permission", "cursedeffects.trail." + particle.name());
+                    config.set("trails." + particle.name() + ".icon.material", Material.GLASS.name());
+                    config.set("trails." + particle.name() + ".icon.data", (byte) 0);
+                    config.set("trails." + particle.name() + ".offsetX", 1);
+                    config.set("trails." + particle.name() + ".offsetY", 0);
+                    config.set("trails." + particle.name() + ".offsetZ", 1);
+                    saveConfig();
+                }
             }
         }
 
@@ -87,7 +115,10 @@ public class CursedEffectsPlugin extends JavaPlugin {
             getUserManager().removeFromCache(player.getUniqueId());
         });
 
-        database.closePool();
+        if (!isUseFlatfile()) {
+            database.closePool();
+        }
+
         System.out.println("Cursed Effects by ThatAbstractWolf disabled.");
     }
 
@@ -111,6 +142,10 @@ public class CursedEffectsPlugin extends JavaPlugin {
         return database;
     }
 
+    public LocalFileDatabase getFlatfileDatabase() {
+        return flatfileDatabase;
+    }
+
     public static CursedEffectsPlugin getPlugin() {
         return plugin;
     }
@@ -131,7 +166,12 @@ public class CursedEffectsPlugin extends JavaPlugin {
                 "    uuid VARCHAR(40) NOT NULL,\n" +
                 "    particle VARCHAR(45),\n" +
                 "    sound VARCHAR(45),\n" +
+                "    trail VARCHAR(45),\n" +
                 "    PRIMARY KEY (uuid)\n" +
                 ");", false, true, (statement) -> {});
+    }
+
+    public boolean isUseFlatfile() {
+        return useFlatfile;
     }
 }

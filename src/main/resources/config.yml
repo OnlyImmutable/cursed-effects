@@ -4,3 +4,6 @@ database:
   database: 'cursedeffects'
   username: 'root'
   password: 'root'
+settings:
+  flatfile: true
+  teleportDelay: 20

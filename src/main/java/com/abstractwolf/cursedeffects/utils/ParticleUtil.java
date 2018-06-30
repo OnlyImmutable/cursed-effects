@@ -41,6 +41,37 @@ public class ParticleUtil {
         }
     }
 
+    public static void sendParticle(Location location, Particle particle, int amount, float speed, int x, int y, int z) {
+
+        try {
+
+            Class<?> enumParticle = ReflectionUtil.PackageType.MINECRAFT_SERVER.getClass("EnumParticle");
+            Method enumValueOf = enumParticle.getMethod("valueOf", String.class);
+            Object enumValue = enumValueOf.invoke(null, particle.name());
+
+            Object packet = ReflectionUtil.PackageType.MINECRAFT_SERVER.getClass("PacketPlayOutWorldParticles")
+                    .getConstructor(enumParticle, boolean.class, float.class, float.class, float.class, float.class, float.class, float.class, float.class, int.class, int[].class)
+                    .newInstance(
+                            enumValue,
+                            false,
+                            (float) location.getX(),
+                            (float) location.getY(),
+                            (float) location.getZ(),
+                            x,
+                            y,
+                            z,
+                            speed,
+                            amount,
+                            null);
+
+            for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+                sendPacket(onlinePlayer, packet);
+            }
+        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void sendPacket(Player player, Object packet) {
 
         try {

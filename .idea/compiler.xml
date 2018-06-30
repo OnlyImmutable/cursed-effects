@@ -9,5 +9,8 @@
         <module name="CursedEffects" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CursedEffects" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
