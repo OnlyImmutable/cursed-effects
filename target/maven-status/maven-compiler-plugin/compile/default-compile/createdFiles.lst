@@ -31,4 +31,5 @@ com\abstractwolf\cursedeffects\utils\command\AbstractCommand.class
 com\abstractwolf\cursedeffects\CursedEffectsPlugin.class
 com\abstractwolf\cursedeffects\utils\Callback.class
 com\abstractwolf\cursedeffects\gui\EffectSelectGui$1.class
+com\abstractwolf\cursedeffects\listener\DataListener$2.class
 com\abstractwolf\cursedeffects\utils\menu\MenuItem.class

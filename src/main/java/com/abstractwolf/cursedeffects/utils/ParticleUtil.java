@@ -27,7 +27,7 @@ public class ParticleUtil {
                             (float) location.getY(),
                             (float) location.getZ(),
                             1,
-                            0,
+                            1,
                             1,
                             speed,
                             amount,

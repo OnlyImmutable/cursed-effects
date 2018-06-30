@@ -55,6 +55,11 @@
             <id>central</id>
             <url>http://central.maven.org/maven2/</url>
         </repository>
+
+        <repository>
+            <id>cubekrowd-repo</id>
+            <url>https://mavenrepo.cubekrowd.net/artifactory/repo/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -89,6 +94,14 @@
             <artifactId>commons-io</artifactId>
             <version>LATEST</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!-- SuperVanish -->
+        <dependency>
+            <groupId>de.myzelyam</groupId>
+            <artifactId>SuperVanish</artifactId>
+            <version>LATEST</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

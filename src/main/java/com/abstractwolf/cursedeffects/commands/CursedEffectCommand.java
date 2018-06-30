@@ -30,32 +30,33 @@ public class CursedEffectCommand extends AbstractCommand {
                 new EffectSelectGui(player, 1, true);
             } else if (args[0].equalsIgnoreCase("sounds")) {
                 new EffectSelectGui(player, 1, false);
-            } else if (args[0].equalsIgnoreCase("test") && player.isOp()) {
+            } else if (args[0].equalsIgnoreCase("test") && player.hasPermission("cursedeffects.test")) {
                 UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-                if (data.getParticle() != null) {
-                    int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
-                    float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+                new BukkitRunnable() {
 
-//            ParticleUtil.sendParticle(player, data.getParticle(), amount, speed);
+                    @Override
+                    public void run() {
 
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
+                        if (data.getParticle() != null) {
+
+                            int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
+                            float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+
                             ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
                         }
-                    }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10);
-                }
 
-                if (data.getSound() != null) {
+                        if (data.getSound() != null) {
 
-                    float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
-                    float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
+                            float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
+                            float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
 
-                    player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
-                }
+                            player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
+                        }
 
-                Message.sendMessageToPlayer(player, "Ran test sound and particle..");
+                        Message.sendMessageToPlayer(player, "Ran test sound and particle..");
+                    }
+                }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10);
             } else {
                 Message.sendMessageToPlayer(player, "/cursedeffects [particles|sounds]");
             }

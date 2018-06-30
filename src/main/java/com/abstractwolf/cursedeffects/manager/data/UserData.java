@@ -77,21 +77,29 @@ public class UserData {
 
         CursedEffectsPlugin plugin = CursedEffectsPlugin.getPlugin();
 
-        if (existed) {
-            // save data (UPDATE)
+        plugin.getDatabase().sendPreparedStatement("SELECT * FROM cursedeffects WHERE uuid='" + uuid.toString() + "';", false, true, (statement) -> {
 
-            plugin.getDatabase().sendPreparedStatement("UPDATE cursedeffects SET " +
-                            "uuid='" + uuid.toString() + "', " +
-                            "particle='" + (particle == null ? "NONE" : particle.name()) + "', " +
-                            "sound='" + (sound == null ? "NONE" : sound.name()) + "' " +
-                            "WHERE uuid='" + uuid.toString() + "';"
-                    , true, !shutdown, (statement) -> {});
-        } else {
-            // save data (INSERT)
-            plugin.getDatabase().sendPreparedStatement("INSERT INTO cursedeffects (uuid, particle, sound) VALUES('" + uuid.toString() + "', '" + (particle == null ? "NONE" :  particle.name()) + "', '" + (sound == null ? "NONE" : sound.name()) + "');"
-                    , false, !shutdown, (statement) -> {});
-        }
+            try {
 
-        System.out.println("Data saved for (" + uuid.toString() + ").");
+                ResultSet set = statement.getResultSet();
+
+                if (set.next()) {
+                    plugin.getDatabase().sendPreparedStatement("UPDATE cursedeffects SET " +
+                                    "uuid='" + uuid.toString() + "', " +
+                                    "particle='" + (particle == null ? "NONE" : particle.name()) + "', " +
+                                    "sound='" + (sound == null ? "NONE" : sound.name()) + "' " +
+                                    "WHERE uuid='" + uuid.toString() + "';"
+                            , true, !shutdown, (statementTemp) -> {});
+                    System.out.println("Data saved for (" + uuid.toString() + ").");
+                    return;
+                }
+
+                plugin.getDatabase().sendPreparedStatement("INSERT INTO cursedeffects (uuid, particle, sound) VALUES('" + uuid.toString() + "', '" + (particle == null ? "NONE" :  particle.name()) + "', '" + (sound == null ? "NONE" : sound.name()) + "');"
+                        , false, !shutdown, (statementTemp1) -> {});
+                System.out.println("Data saved for (" + uuid.toString() + ").");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
