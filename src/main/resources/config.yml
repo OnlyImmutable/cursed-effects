@@ -6,4 +6,3 @@ database:
   password: 'root'
 settings:
   flatfile: true
-  teleportDelay: 20

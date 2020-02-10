@@ -12,7 +12,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class MenuFactory implements InventoryHolder {
+public abstract class MenuFactory implements InventoryHolder
+{
 
     private final Inventory inventory;
 
@@ -29,12 +30,15 @@ public abstract class MenuFactory implements InventoryHolder {
      * @param title - the title.
      * @param rows  - the rows.
      */
-    public MenuFactory(String title, int rows) {
+    public MenuFactory(String title, int rows)
+    {
+
         this.title = title;
         this.rows = rows;
 
         items = new ArrayList<>();
         inventory = Bukkit.createInventory(this, (rows * 9), ChatColor.translateAlternateColorCodes('&', title));
+
     }
 
     /**
@@ -42,8 +46,11 @@ public abstract class MenuFactory implements InventoryHolder {
      *
      * @param item - the item.
      */
-    public void addItem(MenuItem item) {
+    public void addItem(MenuItem item)
+    {
+
         items.add(item);
+
     }
 
     /**
@@ -51,38 +58,66 @@ public abstract class MenuFactory implements InventoryHolder {
      *
      * @param player - the player who you open it for.
      */
-    public void openInventory(Player player) {
+    public void openInventory(Player player)
+    {
 
-        if (inventory == null) return;
+        if (inventory == null)
+            return;
 
         inventory.clear();
 
         List<Integer> takenSlots = new ArrayList<>();
-        for (MenuItem item : items) {
+
+        for (MenuItem item : items)
+        {
+
             inventory.setItem(item.getIndex(), item.getItemStack());
             takenSlots.add(item.getIndex());
+
         }
-        if (border != null) {
+
+        if (border != null)
+        {
+
             int i = getRows() * 9;
-            for (int j = 0; j < i; j++) {
-                if (!takenSlots.contains(j)) {
-                    MenuItem menuItem = new MenuItem(j, border.getItemStack()) {
+
+            for (int j = 0; j < i; j++)
+            {
+
+                if (!takenSlots.contains(j))
+                {
+
+                    MenuItem menuItem = new MenuItem(j, border.getItemStack())
+                    {
+
                         @Override
-                        public void click(Player player, ClickType clickType) {
+                        public void click(Player player, ClickType clickType)
+                        {
 
                         }
+
                     };
                     inventory.setItem(j, menuItem.getItemStack());
+
                 }
+
             }
+
         }
-        new BukkitRunnable() {
+
+        new BukkitRunnable()
+        {
 
             @Override
-            public void run() {
+            public void run()
+            {
+
                 player.openInventory(inventory);
+
             }
+
         }.runTaskLater(CursedEffectsPlugin.getPlugin(), 5L);
+
     }
 
     /**
@@ -91,8 +126,11 @@ public abstract class MenuFactory implements InventoryHolder {
      * @return Inventory
      */
     @Override
-    public Inventory getInventory() {
+    public Inventory getInventory()
+    {
+
         return inventory;
+
     }
 
     /**
@@ -100,8 +138,11 @@ public abstract class MenuFactory implements InventoryHolder {
      *
      * @return Title
      */
-    public String getTitle() {
+    public String getTitle()
+    {
+
         return title;
+
     }
 
     /**
@@ -109,8 +150,11 @@ public abstract class MenuFactory implements InventoryHolder {
      *
      * @return Number of rows (1 - 6).
      */
-    public int getRows() {
+    public int getRows()
+    {
+
         return rows;
+
     }
 
     /**
@@ -118,16 +162,25 @@ public abstract class MenuFactory implements InventoryHolder {
      *
      * @return MenuItem - list
      */
-    public List<MenuItem> getItems() {
+    public List<MenuItem> getItems()
+    {
+
         return items;
+
     }
 
-    public MenuItem getBorder() {
+    public MenuItem getBorder()
+    {
+
         return border;
+
     }
 
-    public void setBorder(MenuItem border) {
+    public void setBorder(MenuItem border)
+    {
+
         this.border = border;
-    }
-}
 
+    }
+
+}

@@ -1,189 +1,293 @@
 package com.abstractwolf.cursedeffects.listener;
 
-import com.abstractwolf.cursedeffects.CursedEffectsPlugin;
-import com.abstractwolf.cursedeffects.manager.data.UserData;
-import com.abstractwolf.cursedeffects.utils.ParticleUtil;
-import de.myzelyam.api.vanish.VanishAPI;
+import java.util.UUID;
+
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.*;
+import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.util.UUID;
+import com.abstractwolf.cursedeffects.CursedEffectsPlugin;
+import com.abstractwolf.cursedeffects.manager.data.UserData;
+import com.abstractwolf.cursedeffects.utils.ParticleUtil;
 
-public class DataListener implements Listener {
+import de.myzelyam.api.vanish.VanishAPI;
+
+public class DataListener implements Listener
+{
 
     @EventHandler
-    public void onPreConnect(AsyncPlayerPreLoginEvent event) {
-        UUID uuid = event.getUniqueId();
+    public void onPreConnect(AsyncPlayerPreLoginEvent event)
+    {
 
-        if (event.getLoginResult() == AsyncPlayerPreLoginEvent.Result.ALLOWED) {
+        if (event.getLoginResult() == AsyncPlayerPreLoginEvent.Result.ALLOWED)
+        {
+
+            final UUID uuid = event.getUniqueId();
+
             CursedEffectsPlugin.getPlugin().getUserManager().addToCache(uuid);
             CursedEffectsPlugin.getPlugin().getUserManager().getUserData(uuid).load();
+
         }
+
     }
 
     @EventHandler
-    public void onConnect(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
+    public void onConnect(PlayerJoinEvent event)
+    {
 
-        UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
+        final Player player = event.getPlayer();
 
-        if (!VanishAPI.isInvisible(player)) {
+        final UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-            if (data == null) return;
+        if (!VanishAPI.isInvisible(player))
+        {
 
-            new BukkitRunnable() {
+            if (data == null)
+            {
+
+                return;
+
+            }
+
+            new BukkitRunnable()
+            {
 
                 @Override
-                public void run() {
+                public void run()
+                {
 
-                    if (data.getParticle() != null) {
-                        int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
-                        float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+                    if (data.getParticle() != null)
+                    {
 
-                        ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
+                        final int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
+                        final float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+
+                        ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed, 0.1F, 0, 0.1F);
+
                     }
 
-                    if (data.getSound() != null) {
+                    if (data.getSound() != null)
+                    {
 
-                        float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
-                        float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
+                        final float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
+                        final float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
 
                         player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
+
                     }
+
                 }
-            }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10L);
+
+            }.runTaskLater(CursedEffectsPlugin.getPlugin(), 2L);
+
         }
+
     }
 
     @EventHandler
-    public void onDisconnect(PlayerQuitEvent event) {
-        Player player = event.getPlayer();
+    public void onDisconnect(PlayerQuitEvent event)
+    {
 
-        UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
+        final Player player = event.getPlayer();
 
-        if (!VanishAPI.isInvisible(player)) {
+        final UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-            if (data == null) return;
+        if (!VanishAPI.isInvisible(player))
+        {
 
-            new BukkitRunnable() {
+            if (data == null)
+            {
+
+                return;
+
+            }
+
+            new BukkitRunnable()
+            {
 
                 @Override
-                public void run() {
+                public void run()
+                {
 
-                    if (data.getParticle() != null) {
-                        int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
-                        float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+                    if (data.getParticle() != null)
+                    {
 
-                        ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
+                        final int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
+                        final float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+
+                        ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed, 0.1F, 0, 0.1F);
+
                     }
 
-                    if (data.getSound() != null) {
+                    if (data.getSound() != null)
+                    {
 
-                        float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
-                        float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
+                        final float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
+                        final float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
 
                         player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
+
                     }
+
                 }
-            }.runTaskLater(CursedEffectsPlugin.getPlugin(), 10L);
+
+            }.runTaskLater(CursedEffectsPlugin.getPlugin(), 2L);
+
         }
 
         data.save(false);
         CursedEffectsPlugin.getPlugin().getUserManager().removeFromCache(player.getUniqueId());
+
     }
 
     @EventHandler
-    public void onDeath(PlayerDeathEvent event) {
+    public void onDeath(PlayerDeathEvent event)
+    {
 
-        Player player = event.getEntity();
-        UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
+        final Player player = event.getEntity();
+        final UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-        if (!VanishAPI.isInvisible(player)) {
+        if (!VanishAPI.isInvisible(player))
+        {
 
-            if (data == null) return;
+            if (data == null)
+            {
 
-            if (data.getParticle() != null) {
-                int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
-                float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+                return;
 
-                ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed);
             }
 
-            if (data.getSound() != null) {
+            if (data.getParticle() != null)
+            {
 
-                float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
-                float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
+                final int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
+                final float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+
+                ParticleUtil.sendParticle(player.getLocation(), data.getParticle(), amount, speed, 0.1F, 0, 0.1F);
+
+            }
+
+            if (data.getSound() != null)
+            {
+
+                final float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
+                final float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
 
                 player.getWorld().playSound(player.getLocation(), data.getSound(), volume, pitch);
+
             }
+
         }
+
     }
 
     @EventHandler
-    public void onMove(PlayerMoveEvent event) {
-        Player player = event.getPlayer();
-        UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
+    public void onMove(PlayerMoveEvent event)
+    {
 
-        if (!VanishAPI.isInvisible(player)) {
+        final Player player = event.getPlayer();
+        final UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-            if (data == null) return;
+        if (!VanishAPI.isInvisible(player))
+        {
 
-            if (data.getParticleTrail() != null) {
-                int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".amount");
-                float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("trails." + data.getParticleTrail().name() + ".speed");
+            if (data == null)
+            {
 
-                int offsetX = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetX");
-                int offsetY = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetY");
-                int offsetZ = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetZ");
+                return;
+
+            }
+
+            if (data.getParticleTrail() != null)
+            {
+
+                final int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".amount");
+                final float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("trails." + data.getParticleTrail().name() + ".speed");
+
+                final int offsetX = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetX");
+                final int offsetY = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetY");
+                final int offsetZ = CursedEffectsPlugin.getPlugin().getConfig().getInt("trails." + data.getParticleTrail().name() + ".offsetZ");
 
                 ParticleUtil.sendParticle(player.getLocation(), data.getParticleTrail(), amount, speed, offsetX, offsetY, offsetZ);
+
             }
+
         }
+
     }
 
     @EventHandler
-    public void onTeleport(PlayerTeleportEvent event) {
+    public void onTeleport(PlayerTeleportEvent event)
+    {
 
-        new BukkitRunnable() {
+        new BukkitRunnable()
+        {
 
             @Override
-            public void run() {
-                Player player = event.getPlayer();
-                UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
+            public void run()
+            {
 
-                Location previous = event.getFrom();
-                Location location = event.getTo();
+                final Player player = event.getPlayer();
+                final UserData data = CursedEffectsPlugin.getPlugin().getUserManager().getUserData(player.getUniqueId());
 
-                if ((previous != null && location != null) && location.getWorld() == previous.getWorld() && previous.distance(location) < 10) {
-//            System.out.println("Previous location was " + (previous.distance(location)) + " blocks from new location.");
+                final Location previous = event.getFrom();
+                final Location location = event.getTo();
+
+                if ((previous != null
+                        && location != null)
+                        && location.getWorld() == previous.getWorld()
+                        && previous.distance(location) < 10)
+                {
+
+                    //            System.out.println("Previous location was " + (previous.distance(location)) + " blocks from new location.");
                     return;
+
                 }
 
-                if (!VanishAPI.isInvisible(player)) {
+                if (!VanishAPI.isInvisible(player))
+                {
 
-                    if (data == null) return;
+                    if (data == null)
+                    {
 
-                    if (data.getParticle() != null) {
-                        int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
-                        float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+                        return;
 
-                        ParticleUtil.sendParticle(location, data.getParticle(), amount, speed);
                     }
 
-                    if (data.getSound() != null) {
+                    if (data.getParticle() != null)
+                    {
 
-                        float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
-                        float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
+                        final int amount = CursedEffectsPlugin.getPlugin().getConfig().getInt("particles." + data.getParticle().name() + ".amount");
+                        final float speed = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("particles." + data.getParticle().name() + ".speed");
+
+                        ParticleUtil.sendParticle(location, data.getParticle(), amount, speed, 0, 0, 0);
+
+                    }
+
+                    if (data.getSound() != null)
+                    {
+
+                        final float volume = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".volume");
+                        final float pitch = (float) CursedEffectsPlugin.getPlugin().getConfig().getDouble("sounds." + data.getSound().name() + ".pitch");
 
                         player.getWorld().playSound(location, data.getSound(), volume, pitch);
+
                     }
+
                 }
+
             }
-        }.runTaskLater(CursedEffectsPlugin.getPlugin(), CursedEffectsPlugin.getPlugin().getConfig().getInt("settings.teleportDelay"));
+
+        }.runTaskLater(CursedEffectsPlugin.getPlugin(), 2);
+
     }
+
 }

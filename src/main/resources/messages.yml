@@ -1,6 +1,5 @@
 messages:
-  prefix: '&5&lCursed Effects &8| &7'
-  setParticle: 'Your particle was set to %particle%!'
-  setTrail: 'Your trail was set to %trail%!'
-  setSound: 'Your sound was set to %sound%!'
-  noPermission: 'You do not have permission to use this.. You require %permission%.'
+  setParticle: '&5&lEffects &7: Your particle was set to %particle%!'
+  setTrail: '&5&lEffects &7: Your trail was set to %trail%!'
+  setSound: '&5&lEffects &7: Your sound was set to %sound%!'
+  noPermission: '&5&lCursedCraft &7: &cUnknown command or insufficient permissions.'

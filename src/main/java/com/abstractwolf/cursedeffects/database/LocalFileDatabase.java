@@ -7,30 +7,50 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class LocalFileDatabase {
+public class LocalFileDatabase
+{
 
     private File file;
     private FileConfiguration fileConfiguration;
 
-    public LocalFileDatabase() {
+    public LocalFileDatabase()
+    {
+
         this.file = new File(CursedEffectsPlugin.getPlugin().getDataFolder(), "data.yml");
         this.fileConfiguration = YamlConfiguration.loadConfiguration(file);
+
     }
 
-    public void updateConfig() {
+    public void updateConfig()
+    {
 
-        try {
+        try
+        {
+
             fileConfiguration.save(file);
-        } catch (IOException e) {
-            e.printStackTrace();
+
         }
+        catch (IOException e)
+        {
+
+            e.printStackTrace();
+
+        }
+
     }
 
-    public File getFile() {
+    public File getFile()
+    {
+
         return file;
+
     }
 
-    public FileConfiguration getFileConfiguration() {
+    public FileConfiguration getFileConfiguration()
+    {
+
         return fileConfiguration;
+
     }
+
 }

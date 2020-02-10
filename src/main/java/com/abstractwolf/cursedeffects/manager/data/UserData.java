@@ -1,150 +1,235 @@
 package com.abstractwolf.cursedeffects.manager.data;
 
-import com.abstractwolf.cursedeffects.CursedEffectsPlugin;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
-import org.bukkit.configuration.file.FileConfiguration;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 
-public class UserData {
+import org.bukkit.Particle;
+import org.bukkit.Sound;
+import org.bukkit.configuration.file.FileConfiguration;
 
-    private boolean existed;
+import com.abstractwolf.cursedeffects.CursedEffectsPlugin;
+
+public class UserData
+{
 
     private final UUID uuid;
     private Particle particle;
     private Particle particleTrail;
     private Sound sound;
 
-    public UserData(UUID uuid) {
+    public UserData(UUID uuid)
+    {
+
         this.uuid = uuid;
-        this.existed = false;
 
         this.particle = null;
         this.sound = null;
         this.particleTrail = null;
+
     }
 
-    public UUID getUuid() {
+    public UUID getUuid()
+    {
+
         return uuid;
+
     }
 
-    public Particle getParticle() {
+    public Particle getParticle()
+    {
+
         return particle;
+
     }
 
-    public void setParticle(Particle particle) {
+    public void setParticle(Particle particle)
+    {
+
         this.particle = particle;
+
     }
 
-    public Particle getParticleTrail() {
+    public Particle getParticleTrail()
+    {
+
         return particleTrail;
+
     }
 
-    public void setParticleTrail(Particle particleTrail) {
+    public void setParticleTrail(Particle particleTrail)
+    {
+
         this.particleTrail = particleTrail;
+
     }
 
-    public Sound getSound() {
+    public Sound getSound()
+    {
+
         return sound;
+
     }
 
-    public void setSound(Sound sound) {
+    public void setSound(Sound sound)
+    {
+
         this.sound = sound;
+
     }
 
-    public void load() {
-        CursedEffectsPlugin plugin = CursedEffectsPlugin.getPlugin();
+    public void load()
+    {
 
-        if (!plugin.isUseFlatfile()) {
-            plugin.getDatabase().sendPreparedStatement("SELECT * FROM cursedeffects WHERE uuid='" + uuid.toString() + "';", false, true, (statement) -> {
+        final CursedEffectsPlugin plugin = CursedEffectsPlugin.getPlugin();
 
-                try {
+        if (!plugin.isUseFlatfile())
+        {
 
-                    ResultSet set = statement.getResultSet();
+            plugin.getDatabase().sendPreparedStatement("SELECT * FROM cursedeffects WHERE uuid='" + uuid.toString() + "';", false, true, (statement) ->
+            {
 
-                    if (set.next()) {
+                try
+                {
 
-                        if (!set.getString("particle").equals("NONE")) {
+                    final ResultSet set = statement.getResultSet();
+
+                    if (set.next())
+                    {
+
+                        if (!set.getString("particle").equals("NONE"))
+                        {
+
                             setParticle(Particle.valueOf(set.getString("particle")));
+
                         }
 
-                        if (!set.getString("sound").equals("NONE")) {
+                        if (!set.getString("sound").equals("NONE"))
+                        {
+
                             setSound(Sound.valueOf(set.getString("sound")));
+
                         }
 
-                        if (!set.getString("trail").equals("NONE")) {
+                        if (!set.getString("trail").equals("NONE"))
+                        {
+
                             setParticleTrail(Particle.valueOf(set.getString("trail")));
-                        }
 
-                        existed = true;
+                        }
 
                         System.out.println("Data loaded for (" + uuid.toString() + ").");
+
                     }
-                } catch (SQLException e) {
-                    e.printStackTrace();
+
                 }
+                catch (final SQLException e)
+                {
+
+                    e.printStackTrace();
+
+                }
+
             });
-        } else {
 
-            FileConfiguration config = plugin.getFlatfileDatabase().getFileConfiguration();
+        }
+        else
+        {
 
-            if (config == null) {
+            final FileConfiguration config = plugin.getFlatfileDatabase().getFileConfiguration();
+
+            if (config == null)
+            {
+
                 System.out.println("Flatfile was null!");
                 return;
+
             }
 
-            if (config.getString("data." + uuid.toString() + ".particle") != null && !config.getString("data." + uuid.toString() + ".particle").equals("NONE")) {
+            if (config.getString("data." + uuid.toString() + ".particle") != null
+                    && !config.getString("data." + uuid.toString() + ".particle").equals("NONE"))
+            {
+
                 setParticle(Particle.valueOf(config.getString("data." + uuid.toString() + ".particle")));
+
             }
 
-            if (config.getString("data." + uuid.toString() + ".sound") != null && !config.getString("data." + uuid.toString() + ".sound").equals("NONE")) {
+            if (config.getString("data." + uuid.toString() + ".sound") != null
+                    && !config.getString("data." + uuid.toString() + ".sound").equals("NONE"))
+            {
+
                 setSound(Sound.valueOf(config.getString("data." + uuid.toString() + ".sound")));
+
             }
 
-            if (config.getString("data." + uuid.toString() + ".trail") != null && !config.getString("data." + uuid.toString() + ".trail").equals("NONE")) {
+            if (config.getString("data." + uuid.toString() + ".trail") != null
+                    && !config.getString("data." + uuid.toString() + ".trail").equals("NONE"))
+            {
+
                 setParticleTrail(Particle.valueOf(config.getString("data." + uuid.toString() + ".trail")));
+
             }
 
             System.out.println("Data loaded (flatfile) for (" + uuid.toString() + ").");
+
         }
+
     }
 
-    public void save(boolean shutdown) {
+    public void save(boolean shutdown)
+    {
 
-        CursedEffectsPlugin plugin = CursedEffectsPlugin.getPlugin();
+        final CursedEffectsPlugin plugin = CursedEffectsPlugin.getPlugin();
 
-        if (!plugin.isUseFlatfile()) {
-            plugin.getDatabase().sendPreparedStatement("SELECT * FROM cursedeffects WHERE uuid='" + uuid.toString() + "';", false, true, (statement) -> {
+        if (!plugin.isUseFlatfile())
+        {
 
-                try {
+            plugin.getDatabase().sendPreparedStatement("SELECT * FROM cursedeffects WHERE uuid='" + uuid.toString() + "';", false, true, (statement) ->
+            {
 
-                    ResultSet set = statement.getResultSet();
+                try
+                {
 
-                    if (set.next()) {
+                    final ResultSet set = statement.getResultSet();
+
+                    if (set.next())
+                    {
+
                         plugin.getDatabase().sendPreparedStatement("UPDATE cursedeffects SET " +
-                                        "uuid='" + uuid.toString() + "', " +
-                                        "particle='" + (particle == null ? "NONE" : particle.name()) + "', " +
-                                        "sound='" + (sound == null ? "NONE" : sound.name()) + "' " +
-                                        "trail='" + (particleTrail == null ? "NONE" : particleTrail.name()) + "', " +
-                                        "WHERE uuid='" + uuid.toString() + "';"
-                                , true, !shutdown, (statementTemp) -> {});
+                                "uuid='" + uuid.toString() + "', " +
+                                "particle='" + (particle == null ? "NONE" : particle.name()) + "', " +
+                                "sound='" + (sound == null ? "NONE" : sound.name()) + "' " +
+                                "trail='" + (particleTrail == null ? "NONE" : particleTrail.name()) + "', " +
+                                "WHERE uuid='" + uuid.toString() + "';", true, !shutdown, (statementTemp) ->
+                        {
+
+                        });
                         System.out.println("Data saved for (" + uuid.toString() + ").");
                         return;
+
                     }
 
-                    plugin.getDatabase().sendPreparedStatement("INSERT INTO cursedeffects (uuid, particle, sound, trail) VALUES('" + uuid.toString() + "', '" + (particle == null ? "NONE" :  particle.name()) + "', '" + (sound == null ? "NONE" : sound.name()) + "', '" + (particleTrail == null ? "NONE" : particleTrail.name()) + "');"
-                            , false, !shutdown, (statementTemp1) -> {});
-                    System.out.println("Data saved for (" + uuid.toString() + ").");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            });
-        } else {
+                    plugin.getDatabase().sendPreparedStatement("INSERT INTO cursedeffects (uuid, particle, sound, trail) VALUES('" + uuid.toString() + "', '" + (particle == null ? "NONE" : particle.name()) + "', '" + (sound == null ? "NONE" : sound.name()) + "', '" + (particleTrail == null ? "NONE" : particleTrail.name()) + "');", false, !shutdown, (statementTemp1) ->
+                    {
 
-            FileConfiguration config = plugin.getFlatfileDatabase().getFileConfiguration();
+                    });
+                    System.out.println("Data saved for (" + uuid.toString() + ").");
+
+                }
+                catch (final SQLException e)
+                {
+
+                    e.printStackTrace();
+
+                }
+
+            });
+
+        }
+        else
+        {
+
+            final FileConfiguration config = plugin.getFlatfileDatabase().getFileConfiguration();
 
             config.set("data." + uuid.toString() + ".particle", (particle == null ? "NONE" : particle.name()));
             config.set("data." + uuid.toString() + ".sound", (sound == null ? "NONE" : sound.name()));
@@ -152,6 +237,9 @@ public class UserData {
 
             plugin.getFlatfileDatabase().updateConfig();
             System.out.println("Data saved (flatfile) for (" + uuid.toString() + ").");
+
         }
+
     }
+
 }

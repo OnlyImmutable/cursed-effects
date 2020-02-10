@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.abstractwolf.cursedeffects</groupId>
     <artifactId>CursedEffects</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <build>
         <plugins>
@@ -67,7 +67,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
@@ -75,8 +75,8 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>craftbukkit</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
-            <systemPath>${basedir}/libraries/craftbukkit-1.12.2.jar</systemPath>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <systemPath>${basedir}/lib/NMS.jar</systemPath>
             <scope>system</scope>
         </dependency>
 
@@ -96,7 +96,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- SuperVanish -->
+        <!-- SuperVanish  -->
         <dependency>
             <groupId>de.myzelyam</groupId>
             <artifactId>SuperVanish</artifactId>

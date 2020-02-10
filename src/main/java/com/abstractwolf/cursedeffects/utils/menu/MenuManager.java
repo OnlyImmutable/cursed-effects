@@ -9,22 +9,28 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
-public class MenuManager implements Listener {
+public class MenuManager implements Listener
+{
 
     @EventHandler
-    public void onInventoryClick(InventoryClickEvent event) {
+    public void onInventoryClick(InventoryClickEvent event)
+    {
 
-        if (event.getInventory() == null) return;
+        if (event.getInventory() == null)
+            return;
 
         InventoryHolder holder = event.getInventory().getHolder();
 
-        if (holder == null) return;
+        if (holder == null)
+            return;
 
-        if (!(holder instanceof MenuFactory)) return;
+        if (!(holder instanceof MenuFactory))
+            return;
 
         event.setCancelled(true);
 
-        if (!(event.getWhoClicked() instanceof Player)) return;
+        if (!(event.getWhoClicked() instanceof Player))
+            return;
 
         Player player = (Player) event.getWhoClicked();
         MenuFactory menu = (MenuFactory) holder;
@@ -32,15 +38,24 @@ public class MenuManager implements Listener {
         ItemStack clicked = event.getCurrentItem();
         ClickType clickType = event.getClick();
 
-        if (clicked == null ||clicked.getType() == Material.AIR) return;
+        if (clicked == null
+                || clicked.getType() == Material.AIR)
+            return;
 
-        if (clickType == null) return;
+        if (clickType == null)
+            return;
 
-        for (MenuItem menuItem : menu.getItems()) {
+        for (MenuItem menuItem : menu.getItems())
+        {
 
-            if (!menuItem.getItemStack().equals(clicked) && event.getSlot() != menuItem.getIndex()) continue;
+            if (!menuItem.getItemStack().equals(clicked)
+                    && event.getSlot() != menuItem.getIndex())
+                continue;
 
             menuItem.click(player, clickType);
+
         }
+
     }
+
 }

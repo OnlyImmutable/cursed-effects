@@ -4,7 +4,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
-public class MenuItem {
+public class MenuItem
+{
 
     private final ItemStack itemStack;
     private final int index;
@@ -15,19 +16,24 @@ public class MenuItem {
      * @param index     - the slot
      * @param itemStack - the itemstack
      */
-    public MenuItem(int index, ItemStack itemStack) {
+    public MenuItem(int index, ItemStack itemStack)
+    {
+
         this.itemStack = itemStack;
         this.index = index;
-    }
 
+    }
 
     /**
      * Get the ItemStack
      *
      * @return ItemStack
      */
-    public ItemStack getItemStack() {
+    public ItemStack getItemStack()
+    {
+
         return itemStack;
+
     }
 
     /**
@@ -35,8 +41,11 @@ public class MenuItem {
      *
      * @return Slot
      */
-    public int getIndex() {
+    public int getIndex()
+    {
+
         return index;
+
     }
 
     /**
@@ -45,6 +54,9 @@ public class MenuItem {
      * @param player    - the player clicking.
      * @param clickType - the click type.
      */
-    public void click(Player player, ClickType clickType) {
+    public void click(Player player, ClickType clickType)
+    {
+
     }
+
 }

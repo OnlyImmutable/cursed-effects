@@ -1,6 +1,7 @@
 package com.abstractwolf.cursedeffects;
 
-public enum EffectType {
+public enum EffectType
+{
 
     PARTICLE,
     SOUND,

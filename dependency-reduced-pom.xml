@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.abstractwolf.cursedeffects</groupId>
   <artifactId>CursedEffects</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <build>
     <plugins>
       <plugin>
@@ -55,16 +55,12 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.15.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
           <artifactId>commons-lang</artifactId>
           <groupId>commons-lang</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>json-simple</artifactId>
-          <groupId>com.googlecode.json-simple</groupId>
         </exclusion>
         <exclusion>
           <artifactId>guava</artifactId>
@@ -75,12 +71,12 @@
           <groupId>com.google.code.gson</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>snakeyaml</artifactId>
-          <groupId>org.yaml</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>bungeecord-chat</artifactId>
           <groupId>net.md-5</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snakeyaml</artifactId>
+          <groupId>org.yaml</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -93,9 +89,9 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>craftbukkit</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.15.2-R0.1-SNAPSHOT</version>
       <scope>system</scope>
-      <systemPath>${basedir}/libraries/craftbukkit-1.12.2.jar</systemPath>
+      <systemPath>${basedir}/lib/NMS.jar</systemPath>
     </dependency>
   </dependencies>
 </project>

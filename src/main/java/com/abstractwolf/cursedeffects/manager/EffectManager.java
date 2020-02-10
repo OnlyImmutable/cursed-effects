@@ -7,39 +7,62 @@ import org.bukkit.Sound;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EffectManager {
+public class EffectManager
+{
 
     private List<Particle> availableParticles;
     private List<Particle> availableTrails;
     private List<Sound> availableSounds;
 
-    public EffectManager() {
+    public EffectManager()
+    {
+
         availableParticles = new ArrayList<>();
         availableSounds = new ArrayList<>();
         availableTrails = new ArrayList<>();
 
-        for (String particle : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("particles").getKeys(false)) {
+        for (String particle : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("particles").getKeys(false))
+        {
+
             availableParticles.add(Particle.valueOf(particle));
+
         }
 
-        for (String sound : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("sounds").getKeys(false)) {
+        for (String sound : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("sounds").getKeys(false))
+        {
+
             availableSounds.add(Sound.valueOf(sound));
+
         }
 
-        for (String trail : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("trails").getKeys(false)) {
+        for (String trail : CursedEffectsPlugin.getPlugin().getConfig().getConfigurationSection("trails").getKeys(false))
+        {
+
             availableTrails.add(Particle.valueOf(trail));
+
         }
+
     }
 
-    public List<Particle> getAvailableParticles() {
+    public List<Particle> getAvailableParticles()
+    {
+
         return availableParticles;
+
     }
 
-    public List<Sound> getAvailableSounds() {
+    public List<Sound> getAvailableSounds()
+    {
+
         return availableSounds;
+
     }
 
-    public List<Particle> getAvailableTrails() {
+    public List<Particle> getAvailableTrails()
+    {
+
         return availableTrails;
+
     }
+
 }

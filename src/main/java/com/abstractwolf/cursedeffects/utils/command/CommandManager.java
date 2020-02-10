@@ -5,27 +5,44 @@ import com.abstractwolf.cursedeffects.commands.CursedEffectCommand;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandManager {
+public class CommandManager
+{
 
     private List<AbstractCommand> commands;
 
-    public CommandManager() {
+    public CommandManager()
+    {
+
         commands = new ArrayList<>();
+
     }
 
-    public void addCommand(AbstractCommand command) {
+    public void addCommand(AbstractCommand command)
+    {
+
         this.commands.add(command);
+
     }
 
-    public void clearCommands() {
+    public void clearCommands()
+    {
+
         this.commands.clear();
+
     }
 
-    public void registerCommands() {
+    public void registerCommands()
+    {
+
         addCommand(new CursedEffectCommand());
+
     }
 
-    public List<AbstractCommand> getCommands() {
+    public List<AbstractCommand> getCommands()
+    {
+
         return this.commands;
+
     }
+
 }
